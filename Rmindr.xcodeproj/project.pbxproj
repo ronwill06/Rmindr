@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		CB03006C1F552960008396C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB03006B1F552960008396C9 /* AppDelegate.swift */; };
-		CB03006E1F552960008396C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB03006D1F552960008396C9 /* ViewController.swift */; };
+		CB03006E1F552960008396C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB03006D1F552960008396C9 /* HomeViewController.swift */; };
 		CB0300711F552960008396C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB03006F1F552960008396C9 /* Main.storyboard */; };
 		CB0300741F552960008396C9 /* Rmindr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB0300721F552960008396C9 /* Rmindr.xcdatamodeld */; };
 		CB0300761F552960008396C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB0300751F552960008396C9 /* Assets.xcassets */; };
 		CB0300791F552960008396C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0300771F552960008396C9 /* LaunchScreen.storyboard */; };
 		CB0300841F552960008396C9 /* RmindrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0300831F552960008396C9 /* RmindrTests.swift */; };
 		CB03008F1F552960008396C9 /* RmindrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB03008E1F552960008396C9 /* RmindrUITests.swift */; };
+		CB03009D1F552BD2008396C9 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB03009C1F552BD2008396C9 /* HomeCollectionViewCell.swift */; };
+		CB03009F1F552D8A008396C9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB03009E1F552D8A008396C9 /* HomeViewModel.swift */; };
+		CB0300AD1F5533D8008396C9 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0300AB1F5533D8008396C9 /* Reminder.swift */; };
+		CB0300AE1F5533D8008396C9 /* Reminder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0300AC1F5533D8008396C9 /* Reminder+CoreDataProperties.swift */; };
+		CB0300B01F5535D9008396C9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0300AF1F5535D9008396C9 /* DataManager.swift */; };
+		CB0300B31F55384B008396C9 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0300B21F55384B008396C9 /* PersistencyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,7 @@
 /* Begin PBXFileReference section */
 		CB0300681F552960008396C9 /* Rmindr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rmindr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB03006B1F552960008396C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB03006D1F552960008396C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB03006D1F552960008396C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CB0300701F552960008396C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB0300731F552960008396C9 /* Rmindr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rmindr.xcdatamodel; sourceTree = "<group>"; };
 		CB0300751F552960008396C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		CB03008A1F552960008396C9 /* RmindrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RmindrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB03008E1F552960008396C9 /* RmindrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RmindrUITests.swift; sourceTree = "<group>"; };
 		CB0300901F552960008396C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB03009C1F552BD2008396C9 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		CB03009E1F552D8A008396C9 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CB0300AB1F5533D8008396C9 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reminder.swift; path = ../Reminder.swift; sourceTree = "<group>"; };
+		CB0300AC1F5533D8008396C9 /* Reminder+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Reminder+CoreDataProperties.swift"; path = "../Reminder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CB0300AF1F5535D9008396C9 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CB0300B21F55384B008396C9 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +112,13 @@
 			isa = PBXGroup;
 			children = (
 				CB03006B1F552960008396C9 /* AppDelegate.swift */,
-				CB03006D1F552960008396C9 /* ViewController.swift */,
-				CB03006F1F552960008396C9 /* Main.storyboard */,
+				CB0300A41F552E27008396C9 /* Storyboards */,
+				CB0300A31F552DF1008396C9 /* Views */,
+				CB0300A21F552DD7008396C9 /* ViewControllers */,
+				CB0300A51F552E42008396C9 /* View Models */,
+				CB0300A61F552E58008396C9 /* Models */,
+				CB0300B11F553625008396C9 /* Managers */,
 				CB0300751F552960008396C9 /* Assets.xcassets */,
-				CB0300771F552960008396C9 /* LaunchScreen.storyboard */,
 				CB03007A1F552960008396C9 /* Info.plist */,
 				CB0300721F552960008396C9 /* Rmindr.xcdatamodeld */,
 			);
@@ -126,6 +141,57 @@
 				CB0300901F552960008396C9 /* Info.plist */,
 			);
 			path = RmindrUITests;
+			sourceTree = "<group>";
+		};
+		CB0300A21F552DD7008396C9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB03006D1F552960008396C9 /* HomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CB0300A31F552DF1008396C9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB03009C1F552BD2008396C9 /* HomeCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CB0300A41F552E27008396C9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CB03006F1F552960008396C9 /* Main.storyboard */,
+				CB0300771F552960008396C9 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		CB0300A51F552E42008396C9 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB03009E1F552D8A008396C9 /* HomeViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		CB0300A61F552E58008396C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB0300AC1F5533D8008396C9 /* Reminder+CoreDataProperties.swift */,
+				CB0300AB1F5533D8008396C9 /* Reminder.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CB0300B11F553625008396C9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CB0300AF1F5535D9008396C9 /* DataManager.swift */,
+				CB0300B21F55384B008396C9 /* PersistencyManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB03006E1F552960008396C9 /* ViewController.swift in Sources */,
+				CB03006E1F552960008396C9 /* HomeViewController.swift in Sources */,
+				CB0300B01F5535D9008396C9 /* DataManager.swift in Sources */,
 				CB03006C1F552960008396C9 /* AppDelegate.swift in Sources */,
 				CB0300741F552960008396C9 /* Rmindr.xcdatamodeld in Sources */,
+				CB0300B31F55384B008396C9 /* PersistencyManager.swift in Sources */,
+				CB0300AD1F5533D8008396C9 /* Reminder.swift in Sources */,
+				CB0300AE1F5533D8008396C9 /* Reminder+CoreDataProperties.swift in Sources */,
+				CB03009F1F552D8A008396C9 /* HomeViewModel.swift in Sources */,
+				CB03009D1F552BD2008396C9 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
