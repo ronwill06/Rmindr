@@ -10,8 +10,6 @@ import Foundation
 
 protocol HomeViewModel {
   var reminders: [Reminder] { get }
-  
-  init()
 }
 
 extension HomeViewModel {

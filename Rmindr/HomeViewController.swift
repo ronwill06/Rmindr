@@ -21,6 +21,11 @@ class HomeViewController: UIViewController {
     super.viewDidLoad()
     
   }
+  
+  
+  @IBAction func addReminder(_ sender: UIBarButtonItem) {
+    
+  }
 
 }
 
@@ -31,7 +36,7 @@ extension HomeViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 0
+    return self.reminders.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -49,3 +54,5 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UICollectionViewDelegate {
   
 }
+
+extension HomeViewController: HomeViewModel {}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="50U-85-fZf">
+            <objects>
+                <navigationController id="q6d-wK-aq2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3GG-qH-BWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AyJ-7p-lQ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jW8-rM-W81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1316" y="-67"/>
+        </scene>
+        <!--Reminders-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Rmindr" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cxl-6v-5Uy" userLabel="Home Collection View">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jgl-QY-K6k">
                                     <size key="itemSize" width="320" height="59"/>
@@ -69,18 +85,44 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cxl-6v-5Uy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7zG-Y2-pRE"/>
+                            <constraint firstItem="cxl-6v-5Uy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CJN-vi-8iK"/>
                             <constraint firstAttribute="trailing" secondItem="cxl-6v-5Uy" secondAttribute="trailing" id="MfX-0P-ha5"/>
-                            <constraint firstItem="cxl-6v-5Uy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jke-iI-zbZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cxl-6v-5Uy" secondAttribute="bottom" id="v8p-0C-2fg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Reminders" id="IXj-Mj-HZU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0I2-5H-hri">
+                            <connections>
+                                <action selector="addReminder:" destination="BYZ-38-t0r" id="xBA-yo-a6g"/>
+                                <segue destination="GVe-cz-5uk" kind="presentation" id="SVc-qa-2Wc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="homeCollectionView" destination="cxl-6v-5Uy" id="45l-KM-vZY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-316" y="0.0"/>
+            <point key="canvasLocation" x="-306" y="-67"/>
+        </scene>
+        <!--Create Reminder View Controller-->
+        <scene sceneID="aHh-zh-ZhI">
+            <objects>
+                <viewController id="GVe-cz-5uk" customClass="CreateReminderViewController" customModule="Rmindr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WNp-83-bZJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="W2O-vb-BD8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dtd-RC-0p3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rBM-am-8Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="-65"/>
         </scene>
     </scenes>
 </document>

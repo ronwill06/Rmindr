@@ -21,6 +21,8 @@
 		CB0300AE1F5533D8008396C9 /* Reminder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0300AC1F5533D8008396C9 /* Reminder+CoreDataProperties.swift */; };
 		CB0300B01F5535D9008396C9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0300AF1F5535D9008396C9 /* DataManager.swift */; };
 		CB0300B31F55384B008396C9 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0300B21F55384B008396C9 /* PersistencyManager.swift */; };
+		CB7BC6611F567F9300F7B5C3 /* HomeCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7BC6601F567F9300F7B5C3 /* HomeCollectionViewCellViewModel.swift */; };
+		CBBE80761F56892A005864D7 /* CreateReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE80751F56892A005864D7 /* CreateReminderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		CB0300AC1F5533D8008396C9 /* Reminder+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Reminder+CoreDataProperties.swift"; path = "../Reminder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CB0300AF1F5535D9008396C9 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CB0300B21F55384B008396C9 /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		CB7BC6601F567F9300F7B5C3 /* HomeCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		CBBE80751F56892A005864D7 /* CreateReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CB03006D1F552960008396C9 /* HomeViewController.swift */,
+				CBBE80751F56892A005864D7 /* CreateReminderViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				CB03009E1F552D8A008396C9 /* HomeViewModel.swift */,
+				CB7BC6601F567F9300F7B5C3 /* HomeCollectionViewCellViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7BC6611F567F9300F7B5C3 /* HomeCollectionViewCellViewModel.swift in Sources */,
 				CB03006E1F552960008396C9 /* HomeViewController.swift in Sources */,
 				CB0300B01F5535D9008396C9 /* DataManager.swift in Sources */,
 				CB03006C1F552960008396C9 /* AppDelegate.swift in Sources */,
@@ -339,6 +346,7 @@
 				CB0300AD1F5533D8008396C9 /* Reminder.swift in Sources */,
 				CB0300AE1F5533D8008396C9 /* Reminder+CoreDataProperties.swift in Sources */,
 				CB03009F1F552D8A008396C9 /* HomeViewModel.swift in Sources */,
+				CBBE80761F56892A005864D7 /* CreateReminderViewController.swift in Sources */,
 				CB03009D1F552BD2008396C9 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +600,7 @@
 				CB0300951F552960008396C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB0300961F552960008396C9 /* Build configuration list for PBXNativeTarget "RmindrTests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +609,7 @@
 				CB0300981F552960008396C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB0300991F552960008396C9 /* Build configuration list for PBXNativeTarget "RmindrUITests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +618,7 @@
 				CB03009B1F552960008396C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

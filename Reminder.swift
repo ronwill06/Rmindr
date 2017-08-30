@@ -12,13 +12,11 @@ import CoreData
 @objc(Reminder)
 public class Reminder: NSManagedObject {
   
-  let persistencyManager = PersistencyManager.sharedManager
-
-  func saveReminder(with title: String, date: NSDate) {
-    let reminder = NSEntityDescription.insertNewObject(forEntityName: "Reminder", into: persistencyManager.persistentContainer.viewContext) as! Reminder
+  static func saveReminder(with title: String, date: NSDate) {
+    let reminder = NSEntityDescription.insertNewObject(forEntityName: "Reminder", into: PersistencyManager.sharedManager.mainContext) as! Reminder
     reminder.title = title
     reminder.date = date
     
-    persistencyManager.saveContext()
+    PersistencyManager.sharedManager.saveContext()
   }
 }
