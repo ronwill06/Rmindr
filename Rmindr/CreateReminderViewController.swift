@@ -12,15 +12,19 @@ class CreateReminderViewController: UIViewController {
   
   @IBOutlet weak var dateLabel: UILabel!
   @IBOutlet weak var titleTextField: UITextField!
+  var datePicker: UIDatePicker?
+  
   var reminder: Reminder?
   
   @IBAction func openDatePicker(_ sender: Any) {
-    let datePicker = UIDatePicker(frame: CGRect(x: 0.0, y: 0.0, width: self.view.bounds.size.width, height: 40.0))
-    datePicker.datePickerMode = .dateAndTime
-    datePicker.isHidden = false
-    datePicker.date = Date()
-    datePicker.addTarget(self, action: #selector(getReminderDate), for: .valueChanged)
-    view.addSubview(datePicker)
+    datePicker = UIDatePicker(frame: CGRect(x: 0.0, y: 0.0, width: self.view.bounds.size.width, height: 40.0))
+    datePicker?.datePickerMode = .dateAndTime
+    datePicker?.isHidden = false
+    datePicker?.date = Date()
+    datePicker?.addTarget(self, action: #selector(getReminderDate), for: .valueChanged)
+    if let datePicker = self.datePicker {
+      view.addSubview(datePicker)
+    }
   }
   
   func getReminderDate(date: Date) {
