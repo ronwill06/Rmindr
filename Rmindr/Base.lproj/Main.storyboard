@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -117,12 +118,42 @@
                     <view key="view" contentMode="scaleToFill" id="dtd-RC-0p3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaI-gB-p6D">
+                                <rect key="frame" x="62" y="52" width="289" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wag-vW-RD4">
+                                <rect key="frame" x="16" y="56.5" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhT-u7-OTL">
+                                <rect key="frame" x="137" y="114" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="lXc-RR-5wk"/>
+                                </constraints>
+                                <state key="normal" title="Select Date"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yaI-gB-p6D" firstAttribute="leading" secondItem="wag-vW-RD4" secondAttribute="trailing" constant="8" id="14M-LS-EHi"/>
+                            <constraint firstItem="wag-vW-RD4" firstAttribute="leading" secondItem="dtd-RC-0p3" secondAttribute="leadingMargin" id="BaA-eZ-CJH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yaI-gB-p6D" secondAttribute="trailing" constant="8" id="Cnw-Gj-NNy"/>
+                            <constraint firstItem="BhT-u7-OTL" firstAttribute="centerX" secondItem="dtd-RC-0p3" secondAttribute="centerX" id="Dzi-A1-vKz"/>
+                            <constraint firstItem="wag-vW-RD4" firstAttribute="centerY" secondItem="yaI-gB-p6D" secondAttribute="centerY" id="In3-U7-uIC"/>
+                            <constraint firstItem="yaI-gB-p6D" firstAttribute="top" secondItem="WNp-83-bZJ" secondAttribute="bottom" constant="32" id="WpT-xH-Kly"/>
+                            <constraint firstItem="BhT-u7-OTL" firstAttribute="top" secondItem="yaI-gB-p6D" secondAttribute="bottom" constant="32" id="bPo-dy-SH0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBM-am-8Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="386" y="-65"/>
+            <point key="canvasLocation" x="384.80000000000001" y="-65.217391304347828"/>
         </scene>
     </scenes>
 </document>
