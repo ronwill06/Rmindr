@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q6d-wK-aq2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -137,19 +137,41 @@
                                     <constraint firstAttribute="width" constant="100" id="lXc-RR-5wk"/>
                                 </constraints>
                                 <state key="normal" title="Select Date"/>
+                                <connections>
+                                    <action selector="openDatePicker:" destination="GVe-cz-5uk" eventType="touchUpInside" id="EoW-Ok-LVO"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlh-LD-YKb">
+                                <rect key="frame" x="16" y="94" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="-----" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCS-Ji-9HJ">
+                                <rect key="frame" x="62" y="94" width="38.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yaI-gB-p6D" firstAttribute="leading" secondItem="wag-vW-RD4" secondAttribute="trailing" constant="8" id="14M-LS-EHi"/>
+                            <constraint firstItem="rCS-Ji-9HJ" firstAttribute="leading" secondItem="yaI-gB-p6D" secondAttribute="leading" id="AZv-Su-oMZ"/>
                             <constraint firstItem="wag-vW-RD4" firstAttribute="leading" secondItem="dtd-RC-0p3" secondAttribute="leadingMargin" id="BaA-eZ-CJH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yaI-gB-p6D" secondAttribute="trailing" constant="8" id="Cnw-Gj-NNy"/>
                             <constraint firstItem="BhT-u7-OTL" firstAttribute="centerX" secondItem="dtd-RC-0p3" secondAttribute="centerX" id="Dzi-A1-vKz"/>
                             <constraint firstItem="wag-vW-RD4" firstAttribute="centerY" secondItem="yaI-gB-p6D" secondAttribute="centerY" id="In3-U7-uIC"/>
+                            <constraint firstItem="rlh-LD-YKb" firstAttribute="leading" secondItem="wag-vW-RD4" secondAttribute="leading" id="VIB-xx-uSl"/>
+                            <constraint firstItem="rlh-LD-YKb" firstAttribute="centerY" secondItem="rCS-Ji-9HJ" secondAttribute="centerY" id="WO5-WA-A9a"/>
                             <constraint firstItem="yaI-gB-p6D" firstAttribute="top" secondItem="WNp-83-bZJ" secondAttribute="bottom" constant="32" id="WpT-xH-Kly"/>
                             <constraint firstItem="BhT-u7-OTL" firstAttribute="top" secondItem="yaI-gB-p6D" secondAttribute="bottom" constant="32" id="bPo-dy-SH0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="rCS-Ji-9HJ" id="fns-Mh-Vk5"/>
+                        <outlet property="titleTextField" destination="yaI-gB-p6D" id="WSB-Fe-erc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBM-am-8Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
